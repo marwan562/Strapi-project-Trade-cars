@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orderrs",
+  "info": {
+    "singularName": "orderr",
+    "pluralName": "orderrs",
+    "displayName": "Orderr"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "username": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "orderrs"
+    }
+  }
+}
